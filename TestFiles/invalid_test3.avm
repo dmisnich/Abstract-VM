@@ -1,0 +1,5 @@
+push int8(0
+push int32(54)
+div
+dump
+exit

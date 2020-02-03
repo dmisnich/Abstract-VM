@@ -1,0 +1,11 @@
+push int32(54)
+push int32(4)
+push int32(124)
+push int32(500)
+push int32(43)
+add
+sub
+did
+mul
+dump
+exit

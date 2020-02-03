@@ -1,0 +1,13 @@
+push int32(33)
+push int32(4)
+push int32(124)
+push int32(1000)
+push int16(0)
+push int8(20)
+add
+sub
+div
+mul
+add
+dump
+exit

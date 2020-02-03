@@ -1,0 +1,7 @@
+push int8(42)
+push int32(54) ;;;  
+push float(42.56) ; asdasd
+push double (90.123) ;; asd
+push int16(1)
+dump
+exit
