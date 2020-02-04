@@ -43,8 +43,8 @@ public:
     ~VMachine();
 
     void				Run();
-    void				ReadCmd(); // from stdin
-	void				ReadCmd(std::string nameFile);
+    void				CmdRead(); // from stdin
+	void				CmdRead(std::string nameFile);
 
     VMachine &	operator = (VMachine const & r);
 

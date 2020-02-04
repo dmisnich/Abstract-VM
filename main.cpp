@@ -9,18 +9,18 @@ int		main(int argc, char **argv)
 	try
 	{
 		if (argc > 1)
-			virtualMachine.ReadCmd(argv[1]);
+			virtualMachine.CmdRead(argv[1]);
 		else
-			virtualMachine.ReadCmd();
+			virtualMachine.CmdRead();
 		virtualMachine.Run();
 	}
-	catch (VMachine::cmd_unknown & ex)
-	{ std::cout << "line " << ex.getLine() << ": " << ex.what() << std::endl; }
 	catch (VMachine::assert_false & ex)
+	{ std::cout << "line " << ex.getLine() << ": " << ex.what() << std::endl; }
+	catch (VMachine::execution_impossible & ex)
 	{ std::cout << "line " << ex.getLine() << ": " << ex.what() << std::endl; }
 	catch (VMachine::not_enough_operands & ex)
 	{ std::cout << "line " << ex.getLine() << ": " << ex.what() << std::endl; }
-	catch (VMachine::execution_impossible & ex)
+	catch (VMachine::cmd_unknown & ex)
 	{ std::cout << "line " << ex.getLine() << ": " << ex.what() << std::endl; }
 	catch (VMachine::unexpected_eof & ex)
 	{ std::cout << "line " << ex.getLine() << ": " << ex.what() << std::endl; }

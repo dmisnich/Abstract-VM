@@ -74,7 +74,7 @@ bool			VMachine::_cmdFind(std::string input)
 	return false;
 }
 
-void			VMachine::ReadCmd()
+void			VMachine::CmdRead()
 {
 	std::string	input;
 	int			line = 0;
@@ -90,7 +90,7 @@ void			VMachine::ReadCmd()
 	} while (input != ";;");
 }
 
-void			VMachine::ReadCmd(std::string filename)
+void			VMachine::CmdRead(std::string filename)
 {
 	std::ifstream	file(filename);
 	std::string		input;
